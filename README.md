@@ -110,8 +110,8 @@ P4. The following problem has been adapted from The Art of Software Testing, by 
 ![image](https://user-images.githubusercontent.com/75676900/232837962-8e34d26e-73e5-4d8d-9389-4ff5ca2250d7.png)
 ![image](https://user-images.githubusercontent.com/75676900/232837984-018e3cca-7a59-4d53-bed4-b536948fec98.png)
 
-P5. The function prefix(Strings1,Strings2) returns whether or not the string s1 is a prefix of string s2 (you may assume that neither s1 nor s2 is null).
-![image](https://user-images.githubusercontent.com/75676900/232838121-c900f9d8-11f7-4aa3-92dc-36189d1be0e5.png)
+P5. The function prefix(Strings1,Strings2) returns whether or not the string s1 is a prefix of string s2 (you may assume that neither s1 nor s2 is null).  
+ ![image](https://user-images.githubusercontent.com/75676900/232838121-c900f9d8-11f7-4aa3-92dc-36189d1be0e5.png)
 
 > Equivalence Partitioning:
 > ![image](https://user-images.githubusercontent.com/75676900/232838241-4495c7f0-ea14-4b31-8029-4d1128025468.png)
@@ -129,6 +129,123 @@ P5. The function prefix(Strings1,Strings2) returns whether or not the string s1 
 > JUnit Testing:
 > ![image](https://user-images.githubusercontent.com/75676900/232838921-85888dde-3511-438b-b885-b58d8cd7dfbc.png)
 ![image](https://user-images.githubusercontent.com/75676900/232838951-552ba586-af9d-4447-bd8e-bd502c7ee36d.png)
+
+P6. Consider again the triangle classification program (P4) with a slightly different specification: The program reads floating values from the standard input. The three values A, B, and C are interpreted as representing the lengths of the sides of a triangle. The program then prints a message to the standard output that states whether the triangle, if it can be formed, is scalene, isosceles, equilateral, or right angled. Determine the following for the above program:
+
+a) Identify the equivalence classes for the system 
+
+> The following are the equivalence classes for different types of triangles.  
+> 1. INVALID case:   
+> * E1: a + b <= c   
+> * E1: a + c <= b 
+> * E1: b + c <= a 
+
+> 2. EQUILATERAL case:   
+> E1: a = b, b = c, c = a 
+
+> 3. ISOSCELES case:   
+> → E1: a = b, a != c   
+> → E1: a = c, a != b   
+> → E1: b = c, b != a   
+
+> 4. SCALENE case:   
+> → E1: a != b, b != c, c != a   
+
+> 5. RIGHT-ANGLED TRIANGLE case: 
+> → E1: a2 + b2 = c2 
+> → E1: b2 + c2 = a2 
+> → E1: a2 + c2 = b2 
+
+
+b) Identify test cases to cover the identified equivalence classes. Also, explicitly mention which test case would cover which equivalence class. (Hint: you must need to be ensure that the identified set of test cases cover all identified equivalence classes)
+> ![image](https://user-images.githubusercontent.com/75676900/232840409-aeea885d-90b5-47be-ae2e-bc16e6a0f5ad.png)
+
+
+c) For the boundary condition A + B > C case (scalene triangle), identify test cases to verify the boundary. 
+> The test cases to verify boundary condition: 
+> 1. a = 5, b = 4, c = 5 
+> 2. a = 5, b = 5, c = 9 
+> 3. a = 5, b = 6, c = 12 
+
+d) For the boundary condition A = C case (isosceles triangle), identify test cases to verify the boundary. 
+> The test cases to verify boundary condition: 
+> 1. a = 5, b = 4, c = 5 
+> 2. a = 5, b = 4, c = 5.1 
+> 3.. a = 5, b = 4, c = 4.9 
+
+e) For the boundary condition A = B = C case (equilateral triangle), identify test cases to verify the boundary. 
+> The test cases to verify boundary condition: 
+> 1. a = 5, b = 5, c = 5 (a =b=c) 
+> 2. a = 10, b = 10, c = 9 (a=b but a!=c) 
+> 3. a = 10, b = 11, c = 10 (a=c but a!=b) 
+
+f) For the boundary condition A2 + B2 = C2 case (right-angle triangle), identify test cases to verify the boundary. 
+> The test cases to verify boundary condition: 
+> 1. a = 3, b = 4, c = 5 
+> 2. a = 5, b = 12, c = 13 
+
+g) For the non-triangle case, identify test cases to explore the boundary. 
+> The test cases to verify boundary condition: 
+> 1. a = 1, b = 2, c = 3 
+> 2. a = 4.5, b = 5.5, c = 10 
+
+h) For non-positive input, identify test points. 
+> The test points for non-positive inputs: 
+> 1. a = -4.0, b = 3.2, c = 4.5 
+> 2. a = 5, b = -4.2, c = -3.2 
+
+### Section B 
+
+
+****The code below is part of a method in the ConvexHull class in the VMAP system. The following is a small fragment of a method in the ConvexHull class. For the purposes of this exercise you do not need to know the intended function of the method. The parameter p is a Vector of Point objects, p.size() is the size of the vector p, (p.get(i)).x is the x component of the ith point appearing in p, similarly for (p.get(i)).y. This exercise is concerned with structural testing of code and so the focus is on creating test sets that satisfy some particular coverage criterion.
+![image](https://user-images.githubusercontent.com/75676900/232841293-3b640cc9-5e63-46f5-858a-d87bd91f2925.png)
+For the given code fragment you should carry out the following activities. 
+
+****1. Convert the Java code comprising the beginning of the doGraham method into a control flow graph (CFG). 
+> ![image](https://user-images.githubusercontent.com/75676900/232841474-17fa7cde-a127-44d7-b030-fb19c0c76cae.png)
+
+****2. Construct test sets for your flow graph that are adequate for the following criteria:   
+a. Statement Coverage.     
+b. Branch Coverage.   
+c. Basic Condition Coverage.
+
+The following are the test cases and their corresponding coverage of statements: 
+
+1. p=[(x = 2, y = 2), (x = 2, y = 3), (x = 1, y = 3), (x = 1, y = 4)] 
+Statements covered = {1, 2, 3, 4, 5, 7, 8} 
+Branches covered = {5, 8} 
+Basic conditions covered = {5 - false, 8 - false} 
+
+2. p=[(x = 2, y = 3), (x = 3, y = 4), (x = 1, y = 2), (x = 5, y = 6)] 
+Statements covered = {1, 2, 3, 4, 5, 6, 7} 
+Branches covered = {5, 8} 
+Basic conditions covered = {5 - false, true, 8 - false}
+ 
+3. p=[(x = 1, y = 5), (x = 2, y = 7), (x = 3, y = 5), (x = 4, y = 5), (x = 5, y = 6)] 
+Statements covered = {1, 2, 3, 4, 5, 6, 7, 8, 9} 
+Branches covered = {5, 8} 
+Basic conditions covered = {5 - false, true, 8 - false, true} 
+
+4. p=[(x = 1, y = 2)] 
+Statements covered = {1, 2, 3, 7, 8} 
+Branches covered = {8} 
+Basic conditions covered = {} 
+
+5. p=[] 
+Statements covered = {1, 2, 3} 
+Branches covered = {} 
+Basic conditions covered = {} 
+
+Thus, the above 5 test cases are covering all statements, branches and conditions. These 5 test cases are adequate for statement coverage, branch coverage and basic condition coverage.
+
+
+
+
+
+
+
+
+
 
 
 

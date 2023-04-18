@@ -223,10 +223,10 @@ c. Basic Condition Coverage.
 > Branches covered = {5, 8}   
 > Basic conditions covered = {5 - false, true, 8 - false}  
  
-> 3. p=[(x = 1, y = 5), (x = 2, y = 7), (x = 3, y = 5), (x = 4, y = 5), (x = 5, y = 6)] 
-> Statements covered = {1, 2, 3, 4, 5, 6, 7, 8, 9} 
-> Branches covered = {5, 8} 
-> Basic conditions covered = {5 - false, true, 8 - false, true} 
+> 3. p=[(x = 1, y = 5), (x = 2, y = 7), (x = 3, y = 5), (x = 4, y = 5), (x = 5, y = 6)]   
+> Statements covered = {1, 2, 3, 4, 5, 6, 7, 8, 9}   
+> Branches covered = {5, 8}   
+> Basic conditions covered = {5 - false, true, 8 - false, true}   
 
 > 4. p=[(x = 1, y = 2)]   
 > Statements covered = {1, 2, 3, 7, 8}   

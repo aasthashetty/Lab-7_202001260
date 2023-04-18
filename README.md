@@ -10,10 +10,8 @@ Consider a program for determining the previous date. Its input is a triple of d
 
 > From the given constraints 1 <= month <= 12, 1 <= day <= 31, 1900 <= year <= 2015, The following are the equivalence classes obtained.
  
-
->There are a total of 9 equivalence classes. 
-
->E1 = {1 <= date <= 31}    
+>There are a total of 9 equivalence classes.   
+  E1 = {1 <= date <= 31}    
   E2 = {date < 1}   
   E3 = {date > 31}   
   E4 = {1 <= month <= 12}   
@@ -32,6 +30,30 @@ Write a set of test cases (i.e., test suite) – specific set of data – to pro
 Programs:
 
 P1. The function linearSearch searches for a value v in an array of integers a. If v appears in the array a, then the function returns the first index i, such that a[i] == v; otherwise, -1 is returned.
+
+![image](https://user-images.githubusercontent.com/75676900/232834883-18308785-2b43-47a9-ba0f-b6764bdeb8be.png)
+
+> Equivalence Partitioning:  
+![image](https://user-images.githubusercontent.com/75676900/232835016-158eba57-a54b-461a-a719-fd327c004da9.png)
+
+> Boundary Value Analysis:
+
+![image](https://user-images.githubusercontent.com/75676900/232835132-b8a9e150-b0ca-4096-aadb-54ab5638297f.png)
+
+> Test Cases: 
+1.	v = 2, a = {4,3,2}, expected output: 2  
+2.	v = 3, a = {4,2,1}, expected output: -1   
+3.	v = 4, a = {}, expected output: -1   
+4.	v = 2, a = {1,2,3,2,4}, expected output: 1  
+
+> JUnit Testing:
+![image](https://user-images.githubusercontent.com/75676900/232835425-089e302a-264b-48fd-af22-2c964ae285b9.png)
+
+![image](https://user-images.githubusercontent.com/75676900/232835472-efc81c0d-9e06-40ee-bf71-8424a3914f48.png)
+
+
+
+
 
 
 

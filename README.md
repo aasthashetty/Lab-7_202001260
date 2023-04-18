@@ -13,15 +13,15 @@ Consider a program for determining the previous date. Its input is a triple of d
 
 >There are a total of 9 equivalence classes. 
 
->E1 = {1 <= date <= 31} 
-/n E2 = {date < 1} 
-\n E3 = {date > 31} 
-\n E4 = {1 <= month <= 12} 
-/n E5 = {month < 1} 
-E6 = {month > 12}
-E7 = {1900 <= year <= 2015} 
-E8 = {year < 1900} 
-E9 = {year > 2015} 
+>E1 = {1 <= date <= 31}    
+  E2 = {date < 1} 
+  E3 = {date > 31} 
+  E4 = {1 <= month <= 12} 
+  E5 = {month < 1} 
+  E6 = {month > 12}
+  E7 = {1900 <= year <= 2015} 
+  E8 = {year < 1900} 
+  E9 = {year > 2015} 
 
 > The following are the weak normal equivalence class test cases: 
  ![image](https://user-images.githubusercontent.com/75676900/232832048-c51b0d8f-85fa-41ae-8668-3a191551c326.png)

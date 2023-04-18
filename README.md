@@ -37,19 +37,34 @@ P1. The function linearSearch searches for a value v in an array of integers a. 
 ![image](https://user-images.githubusercontent.com/75676900/232835016-158eba57-a54b-461a-a719-fd327c004da9.png)
 
 > Boundary Value Analysis:
-
 ![image](https://user-images.githubusercontent.com/75676900/232835132-b8a9e150-b0ca-4096-aadb-54ab5638297f.png)
 
 > Test Cases: 
-1.	v = 2, a = {4,3,2}, expected output: 2  
-2.	v = 3, a = {4,2,1}, expected output: -1   
-3.	v = 4, a = {}, expected output: -1   
-4.	v = 2, a = {1,2,3,2,4}, expected output: 1  
+> 1.	v = 2, a = {4,3,2}, expected output: 2  
+> 2.	v = 3, a = {4,2,1}, expected output: -1   
+> 3.	v = 4, a = {}, expected output: -1   
+> 4.	v = 2, a = {1,2,3,2,4}, expected output: 1  
 
 > JUnit Testing:
 ![image](https://user-images.githubusercontent.com/75676900/232835425-089e302a-264b-48fd-af22-2c964ae285b9.png)
-
 ![image](https://user-images.githubusercontent.com/75676900/232835472-efc81c0d-9e06-40ee-bf71-8424a3914f48.png)
+
+P2. The function countItem returns the number of times a value v appears in an array of integers a.
+
+![image](https://user-images.githubusercontent.com/75676900/232836026-9174b54e-ad9e-4d4f-b302-52098377db2e.png)
+
+> Equivalence Partitioning: 
+![image](https://user-images.githubusercontent.com/75676900/232836111-2a27742b-19fc-45ad-a33e-ee23ec4fb86d.png)
+
+> Boundary Value Analysis:
+![image](https://user-images.githubusercontent.com/75676900/232836182-0f942785-6f9a-44fd-aeef-e0a8a38d23d4.png)
+
+> Test Cases:   
+1.	v = 2, a = {4,2,3,2,1}, expected output: 2   
+2.	v = 3, a = {4,2,3}, expected output: 1 
+3.	v = 20, a = {1,2,3}, expected output: 0   
+4.	v = 1, a = {}, expected output: 0  
+
 
 
 

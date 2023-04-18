@@ -14,10 +14,10 @@ Consider a program for determining the previous date. Its input is a triple of d
 >There are a total of 9 equivalence classes. 
 
 >E1 = {1 <= date <= 31} 
->E2 = {date < 1} 
->E3 = {date > 31} 
-E4 = {1 <= month <= 12} 
-E5 = {month < 1} 
+/nE2 = {date < 1} 
+/nE3 = {date > 31} 
+/nE4 = {1 <= month <= 12} 
+/nE5 = {month < 1} 
 E6 = {month > 12}
 E7 = {1900 <= year <= 2015} 
 E8 = {year < 1900} 

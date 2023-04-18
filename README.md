@@ -15,8 +15,8 @@ Consider a program for determining the previous date. Its input is a triple of d
 
 >E1 = {1 <= date <= 31} 
 /n E2 = {date < 1} 
-/n E3 = {date > 31} 
-/n E4 = {1 <= month <= 12} 
+\n E3 = {date > 31} 
+\n E4 = {1 <= month <= 12} 
 /n E5 = {month < 1} 
 E6 = {month > 12}
 E7 = {1900 <= year <= 2015} 

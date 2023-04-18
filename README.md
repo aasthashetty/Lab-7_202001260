@@ -10,7 +10,7 @@ Consider a program for determining the previous date. Its input is a triple of d
 
 > From the given constraints 1 <= month <= 12, 1 <= day <= 31, 1900 <= year <= 2015, The following are the equivalence classes obtained.
  
->There are a total of 9 equivalence classes.   
+> There are a total of 9 equivalence classes.   
   E1 = {1 <= date <= 31}    
   E2 = {date < 1}   
   E3 = {date > 31}   
@@ -24,12 +24,13 @@ Consider a program for determining the previous date. Its input is a triple of d
 > The following are the weak normal equivalence class test cases: 
  ![image](https://user-images.githubusercontent.com/75676900/232832048-c51b0d8f-85fa-41ae-8668-3a191551c326.png)
 
+
 Write a set of test cases (i.e., test suite) – specific set of data – to properly test the programs. Your test suite should include both correct and incorrect inputs. 
 1.	Enlist which set of test cases have been identified using Equivalence Partitioning and Boundary Value Analysis separately.
 2.	Modify your programs such that it runs on eclipse IDE, and then execute your test suites on the program. While executing your input data in a program, check whether the identified expected outcome (mentioned by you) is correct or not.
 Programs:
 
-P1. The function linearSearch searches for a value v in an array of integers a. If v appears in the array a, then the function returns the first index i, such that a[i] == v; otherwise, -1 is returned.
+**P1.** The function linearSearch searches for a value v in an array of integers a. If v appears in the array a, then the function returns the first index i, such that a[i] == v; otherwise, -1 is returned.
 
 ![image](https://user-images.githubusercontent.com/75676900/232834883-18308785-2b43-47a9-ba0f-b6764bdeb8be.png)
 
@@ -49,7 +50,7 @@ P1. The function linearSearch searches for a value v in an array of integers a. 
 ![image](https://user-images.githubusercontent.com/75676900/232835425-089e302a-264b-48fd-af22-2c964ae285b9.png)
 ![image](https://user-images.githubusercontent.com/75676900/232835472-efc81c0d-9e06-40ee-bf71-8424a3914f48.png)
 
-P2. The function countItem returns the number of times a value v appears in an array of integers a.
+**P2.** The function countItem returns the number of times a value v appears in an array of integers a.
 
 ![image](https://user-images.githubusercontent.com/75676900/232836026-9174b54e-ad9e-4d4f-b302-52098377db2e.png)
 
@@ -70,7 +71,7 @@ P2. The function countItem returns the number of times a value v appears in an a
 > ![image](https://user-images.githubusercontent.com/75676900/232836727-61768125-94e1-4f08-a678-88cb0081855a.png)
 
 
-P3. The function binarySearch searches for a value v in an ordered array of integers a. If v appears in the array a, then the function returns an index i, such that a[i] == v; otherwise, -1 is returned. Assumption: the elements in the array ‘a’ are sorted in non-decreasing order.
+**P3.** The function binarySearch searches for a value v in an ordered array of integers a. If v appears in the array a, then the function returns an index i, such that a[i] == v; otherwise, -1 is returned. Assumption: the elements in the array ‘a’ are sorted in non-decreasing order.
 ![image](https://user-images.githubusercontent.com/75676900/232836562-7fc3c081-1a4c-45b2-9e71-dc1ed7f63fce.png)
 
 > Equivalence Partitioning: 
@@ -89,7 +90,7 @@ P3. The function binarySearch searches for a value v in an ordered array of inte
 ![image](https://user-images.githubusercontent.com/75676900/232837174-fb0d455b-6bab-449d-8f68-a507cc9e503f.png)
 
 
-P4. The following problem has been adapted from The Art of Software Testing, by G. Myers (1979). The function triangle takes three integer parameters that are interpreted as the lengths of the sides of a triangle. It returns whether the triangle is equilateral (three lengths equal), isosceles (two lengths equal), scalene (no lengths equal), or invalid (impossible lengths).
+**P4.** The following problem has been adapted from The Art of Software Testing, by G. Myers (1979). The function triangle takes three integer parameters that are interpreted as the lengths of the sides of a triangle. It returns whether the triangle is equilateral (three lengths equal), isosceles (two lengths equal), scalene (no lengths equal), or invalid (impossible lengths).
 ![image](https://user-images.githubusercontent.com/75676900/232837334-186cda53-8433-4d05-b23e-e2303a678b82.png)
 
 > Equivalence Partitioning:
@@ -110,7 +111,7 @@ P4. The following problem has been adapted from The Art of Software Testing, by 
 ![image](https://user-images.githubusercontent.com/75676900/232837962-8e34d26e-73e5-4d8d-9389-4ff5ca2250d7.png)
 ![image](https://user-images.githubusercontent.com/75676900/232837984-018e3cca-7a59-4d53-bed4-b536948fec98.png)
 
-P5. The function prefix(Strings1,Strings2) returns whether or not the string s1 is a prefix of string s2 (you may assume that neither s1 nor s2 is null).  
+**P5.** The function prefix(Strings1,Strings2) returns whether or not the string s1 is a prefix of string s2 (you may assume that neither s1 nor s2 is null).  
  ![image](https://user-images.githubusercontent.com/75676900/232838121-c900f9d8-11f7-4aa3-92dc-36189d1be0e5.png)
 
 > Equivalence Partitioning:
@@ -130,7 +131,7 @@ P5. The function prefix(Strings1,Strings2) returns whether or not the string s1 
 > ![image](https://user-images.githubusercontent.com/75676900/232838921-85888dde-3511-438b-b885-b58d8cd7dfbc.png)
 ![image](https://user-images.githubusercontent.com/75676900/232838951-552ba586-af9d-4447-bd8e-bd502c7ee36d.png)
 
-P6. Consider again the triangle classification program (P4) with a slightly different specification: The program reads floating values from the standard input. The three values A, B, and C are interpreted as representing the lengths of the sides of a triangle. The program then prints a message to the standard output that states whether the triangle, if it can be formed, is scalene, isosceles, equilateral, or right angled. Determine the following for the above program:
+**P6.** Consider again the triangle classification program (P4) with a slightly different specification: The program reads floating values from the standard input. The three values A, B, and C are interpreted as representing the lengths of the sides of a triangle. The program then prints a message to the standard output that states whether the triangle, if it can be formed, is scalene, isosceles, equilateral, or right angled. Determine the following for the above program:
 
 a) Identify the equivalence classes for the system 
 
@@ -196,48 +197,48 @@ h) For non-positive input, identify test points.
 
 ### Section B 
 
-**The code below is part of a method in the ConvexHull class in the VMAP system. The following is a small fragment of a method in the ConvexHull class. For the purposes of this exercise you do not need to know the intended function of the method. The parameter p is a Vector of Point objects, p.size() is the size of the vector p, (p.get(i)).x is the x component of the ith point appearing in p, similarly for (p.get(i)).y. This exercise is concerned with structural testing of code and so the focus is on creating test sets that satisfy some particular coverage criterion.**    
+The code below is part of a method in the ConvexHull class in the VMAP system. The following is a small fragment of a method in the ConvexHull class. For the purposes of this exercise you do not need to know the intended function of the method. The parameter p is a Vector of Point objects, p.size() is the size of the vector p, (p.get(i)).x is the x component of the ith point appearing in p, similarly for (p.get(i)).y. This exercise is concerned with structural testing of code and so the focus is on creating test sets that satisfy some particular coverage criterion.
 
 ![image](https://user-images.githubusercontent.com/75676900/232841293-3b640cc9-5e63-46f5-858a-d87bd91f2925.png)
 
-**For the given code fragment you should carry out the following activities.**
+For the given code fragment you should carry out the following activities.
 
-**1. Convert the Java code comprising the beginning of the doGraham method into a control flow graph (CFG).**
+1. Convert the Java code comprising the beginning of the doGraham method into a control flow graph (CFG).
 > ![image](https://user-images.githubusercontent.com/75676900/232841474-17fa7cde-a127-44d7-b030-fb19c0c76cae.png)
 
-**2. Construct test sets for your flow graph that are adequate for the following criteria:   
+2. Construct test sets for your flow graph that are adequate for the following criteria:   
 a. Statement Coverage.     
 b. Branch Coverage.   
-c. Basic Condition Coverage.**
+c. Basic Condition Coverage.
 
-The following are the test cases and their corresponding coverage of statements: 
+> The following are the test cases and their corresponding coverage of statements: 
 
-1. p=[(x = 2, y = 2), (x = 2, y = 3), (x = 1, y = 3), (x = 1, y = 4)] 
-Statements covered = {1, 2, 3, 4, 5, 7, 8} 
-Branches covered = {5, 8} 
-Basic conditions covered = {5 - false, 8 - false} 
+> 1. p=[(x = 2, y = 2), (x = 2, y = 3), (x = 1, y = 3), (x = 1, y = 4)]   
+> Statements covered = {1, 2, 3, 4, 5, 7, 8}   
+> Branches covered = {5, 8}   
+> Basic conditions covered = {5 - false, 8 - false}   
 
-2. p=[(x = 2, y = 3), (x = 3, y = 4), (x = 1, y = 2), (x = 5, y = 6)] 
-Statements covered = {1, 2, 3, 4, 5, 6, 7} 
-Branches covered = {5, 8} 
-Basic conditions covered = {5 - false, true, 8 - false}
+> 2. p=[(x = 2, y = 3), (x = 3, y = 4), (x = 1, y = 2), (x = 5, y = 6)]   
+> Statements covered = {1, 2, 3, 4, 5, 6, 7}   
+> Branches covered = {5, 8}   
+> Basic conditions covered = {5 - false, true, 8 - false}  
  
-3. p=[(x = 1, y = 5), (x = 2, y = 7), (x = 3, y = 5), (x = 4, y = 5), (x = 5, y = 6)] 
-Statements covered = {1, 2, 3, 4, 5, 6, 7, 8, 9} 
-Branches covered = {5, 8} 
-Basic conditions covered = {5 - false, true, 8 - false, true} 
+> 3. p=[(x = 1, y = 5), (x = 2, y = 7), (x = 3, y = 5), (x = 4, y = 5), (x = 5, y = 6)] 
+> Statements covered = {1, 2, 3, 4, 5, 6, 7, 8, 9} 
+> Branches covered = {5, 8} 
+> Basic conditions covered = {5 - false, true, 8 - false, true} 
 
-4. p=[(x = 1, y = 2)] 
-Statements covered = {1, 2, 3, 7, 8} 
-Branches covered = {8} 
-Basic conditions covered = {} 
+> 4. p=[(x = 1, y = 2)]   
+> Statements covered = {1, 2, 3, 7, 8}   
+> Branches covered = {8}   
+> Basic conditions covered = {}   
 
-5. p=[] 
-Statements covered = {1, 2, 3} 
-Branches covered = {} 
-Basic conditions covered = {} 
+> 5. p=[]   
+> Statements covered = {1, 2, 3}   
+> Branches covered = {}   
+> Basic conditions covered = {}   
 
-Thus, the above 5 test cases are covering all statements, branches and conditions. These 5 test cases are adequate for statement coverage, branch coverage and basic condition coverage.
+> Thus, the above 5 test cases are covering all statements, branches and conditions. These 5 test cases are adequate for statement coverage, branch coverage and basic condition coverage.
 
 
 

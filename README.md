@@ -142,20 +142,20 @@ a) Identify the equivalence classes for the system
 > * E1: b + c <= a 
 
 > 2. EQUILATERAL case:   
-> E1: a = b, b = c, c = a 
+> * E1: a = b, b = c, c = a 
 
 > 3. ISOSCELES case:   
-> → E1: a = b, a != c   
-> → E1: a = c, a != b   
-> → E1: b = c, b != a   
+> *  E1: a = b, a != c   
+> *  E1: a = c, a != b   
+> *  E1: b = c, b != a   
 
 > 4. SCALENE case:   
-> → E1: a != b, b != c, c != a   
+> *  E1: a != b, b != c, c != a   
 
 > 5. RIGHT-ANGLED TRIANGLE case: 
-> → E1: a2 + b2 = c2 
-> → E1: b2 + c2 = a2 
-> → E1: a2 + c2 = b2 
+> * E1: a2 + b2 = c2 
+> * E1: b2 + c2 = a2 
+> * E1: a2 + c2 = b2 
 
 
 b) Identify test cases to cover the identified equivalence classes. Also, explicitly mention which test case would cover which equivalence class. (Hint: you must need to be ensure that the identified set of test cases cover all identified equivalence classes)
@@ -195,7 +195,9 @@ h) For non-positive input, identify test points.
 > 1. a = -4.0, b = 3.2, c = 4.5 
 > 2. a = 5, b = -4.2, c = -3.2 
 
+
 ### Section B 
+
 
 The code below is part of a method in the ConvexHull class in the VMAP system. The following is a small fragment of a method in the ConvexHull class. For the purposes of this exercise you do not need to know the intended function of the method. The parameter p is a Vector of Point objects, p.size() is the size of the vector p, (p.get(i)).x is the x component of the ith point appearing in p, similarly for (p.get(i)).y. This exercise is concerned with structural testing of code and so the focus is on creating test sets that satisfy some particular coverage criterion.
 
@@ -205,6 +207,7 @@ For the given code fragment you should carry out the following activities.
 
 1. Convert the Java code comprising the beginning of the doGraham method into a control flow graph (CFG).
 > ![image](https://user-images.githubusercontent.com/75676900/232841474-17fa7cde-a127-44d7-b030-fb19c0c76cae.png)
+
 
 2. Construct test sets for your flow graph that are adequate for the following criteria:   
 a. Statement Coverage.     

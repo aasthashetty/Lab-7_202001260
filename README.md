@@ -196,18 +196,17 @@ h) For non-positive input, identify test points.
 
 ### Section B 
 
-
-****The code below is part of a method in the ConvexHull class in the VMAP system. The following is a small fragment of a method in the ConvexHull class. For the purposes of this exercise you do not need to know the intended function of the method. The parameter p is a Vector of Point objects, p.size() is the size of the vector p, (p.get(i)).x is the x component of the ith point appearing in p, similarly for (p.get(i)).y. This exercise is concerned with structural testing of code and so the focus is on creating test sets that satisfy some particular coverage criterion.
+**The code below is part of a method in the ConvexHull class in the VMAP system. The following is a small fragment of a method in the ConvexHull class. For the purposes of this exercise you do not need to know the intended function of the method. The parameter p is a Vector of Point objects, p.size() is the size of the vector p, (p.get(i)).x is the x component of the ith point appearing in p, similarly for (p.get(i)).y. This exercise is concerned with structural testing of code and so the focus is on creating test sets that satisfy some particular coverage criterion.**
 ![image](https://user-images.githubusercontent.com/75676900/232841293-3b640cc9-5e63-46f5-858a-d87bd91f2925.png)
-For the given code fragment you should carry out the following activities. 
+**For the given code fragment you should carry out the following activities.**
 
-****1. Convert the Java code comprising the beginning of the doGraham method into a control flow graph (CFG). 
+**1. Convert the Java code comprising the beginning of the doGraham method into a control flow graph (CFG). **
 > ![image](https://user-images.githubusercontent.com/75676900/232841474-17fa7cde-a127-44d7-b030-fb19c0c76cae.png)
 
-****2. Construct test sets for your flow graph that are adequate for the following criteria:   
+**2. Construct test sets for your flow graph that are adequate for the following criteria:   
 a. Statement Coverage.     
 b. Branch Coverage.   
-c. Basic Condition Coverage.
+c. Basic Condition Coverage.**
 
 The following are the test cases and their corresponding coverage of statements: 
 
